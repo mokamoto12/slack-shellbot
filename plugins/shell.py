@@ -6,7 +6,7 @@ from logging import getLogger, basicConfig, INFO
 @default_reply
 def shell(message):
     text = modify(message.body['text'])
-    res = subprocess.run(text, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    res = subprocess.run(text, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, executable="/bin/bash")
     basicConfig(format='%(asctime)s %(message)s', filename='exec.log', level=INFO)
     logger = getLogger(__name__)
     logger.info(text)
