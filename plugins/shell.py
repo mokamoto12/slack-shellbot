@@ -14,8 +14,12 @@ def shell(message):
 
 
 def modify(text):
-    return unescapeHtml(text).replace("“", '"').replace("”", '"').replace("‘", "'").replace("’", "'")
+    return unescapeHtml(trimExtra(text)).replace("“", '"').replace("”", '"').replace("‘", "'").replace("’", "'")
 
 
 def unescapeHtml(text):
     return text.replace("&lt;", "<").replace("&gt;", ">").replace("&amp;", "&")
+
+
+def trimExtra(text):
+    return text.replace("<", "").replace(">", "")
