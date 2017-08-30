@@ -14,4 +14,8 @@ def shell(message):
 
 
 def modify(text):
-    return text.replace("“", '"').replace("”", '"').replace("‘", "'").replace("’", "'")
+    return unescapeHtml(text).replace("“", '"').replace("”", '"').replace("‘", "'").replace("’", "'")
+
+
+def unescapeHtml(text)
+    return text.replace("&lt;", "<").replace("&gt;", ">").replace("&amp;", "&")
