@@ -17,5 +17,5 @@ def modify(text):
     return unescapeHtml(text).replace("“", '"').replace("”", '"').replace("‘", "'").replace("’", "'")
 
 
-def unescapeHtml(text)
+def unescapeHtml(text):
     return text.replace("&lt;", "<").replace("&gt;", ">").replace("&amp;", "&")
