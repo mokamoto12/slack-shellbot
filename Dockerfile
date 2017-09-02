@@ -10,5 +10,4 @@ RUN pip install -r requirements.txt
 COPY . .
 
 EXPOSE 443
-USER root
 CMD ["python", "./run.py"]
