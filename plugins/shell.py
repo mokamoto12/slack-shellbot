@@ -1,4 +1,5 @@
 from slackbot.bot import default_reply
+import html
 import subprocess
 
 
@@ -11,12 +12,12 @@ def shell(message):
 
 
 def modify(text):
-    return unescapeHtml(trimExtra(text)).replace("“", '"').replace("”", '"').replace("‘", "'").replace("’", "'")
+    return modify_quote_char(html.unescape(remove_extra_char(text)))
 
 
-def unescapeHtml(text):
-    return text.replace("&lt;", "<").replace("&gt;", ">").replace("&amp;", "&")
+def modify_quote_char(text):
+    return text.replace("“", '"').replace("”", '"').replace("‘", "'").replace("’", "'")
 
 
-def trimExtra(text):
+def remove_extra_char(text):
     return text.replace("<", "").replace(">", "")
