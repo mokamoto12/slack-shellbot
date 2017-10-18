@@ -6,8 +6,5 @@
     "SLACKBOT_API_TOKEN": {
       "description": "Slack bot integration's API Token"
     }
-  },
-  "scripts": {
-    "postdeploy": "python run.py"
   }
 }
