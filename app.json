@@ -1,0 +1,10 @@
+{
+  "name": "slack-shellbot",
+  "description": "Run bash command with slack",
+  "repository": "https://github.com/mokamoto12/slack-shellbot",
+  "env": {
+    "SLACKBOT_API_TOKEN": {
+      "description": "Slack bot integration's API Token"
+    }
+  }
+}

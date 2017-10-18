@@ -21,4 +21,4 @@ $ docker run -d -e SLACKBOT_API_TOKEN=xoxb-ABC~~ mokamoto12/slack-shellbot
 
 ### to Heroku
 
-You can deploy to heroku with using [heroku container registry](https://devcenter.heroku.com/articles/container-registry-and-runtime).
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
