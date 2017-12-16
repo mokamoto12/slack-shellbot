@@ -1,0 +1,3 @@
+[submodule "php-evaluate-server"]
+	path = php-evaluate-server
+	url = git@github.com:mokamoto12/php-evaluate-server.git
