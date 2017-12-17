@@ -6,3 +6,4 @@ exec.log
 lib
 pip-selfcheck.json
 pyvenv.cfg
+php-evaluate-server

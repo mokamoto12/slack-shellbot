@@ -1,0 +1,18 @@
+version: '3'
+services:
+  shellbot:
+    build:
+      context: .
+    networks:
+      - bot
+    environment:
+      - SLACKBOT_API_TOKEN=${SLACKBOT_API_TOKEN}
+
+  php-evaluate-server:
+    build:
+      context: ./php-evaluate-server
+    networks:
+      - bot
+
+networks:
+  bot:

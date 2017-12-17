@@ -1,1 +1,1 @@
-PLUGINS = ['plugins.shell']
+PLUGINS = ['plugins.shell', 'plugins.php.main']
