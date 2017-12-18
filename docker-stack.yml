@@ -1,0 +1,21 @@
+version: '3.3'
+services:
+  shellbot:
+    image: mokamoto12/slack-shellbot:0.2
+    networks:
+      - bot
+    env_file: .env
+    depends_on:
+      - php-evaluate-server
+    healthcheck:
+      test: type ls
+
+  php-evaluate-server:
+    image: mokamoto12/php-evaluate-server:latest
+    networks:
+      - bot
+    healthcheck:
+      test: type ls
+
+networks:
+  bot:
